@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="FiberGBT - Fiber Arıza & İnternet Hizmetleri. 7/24 kesintisiz destek ile internet sorunlarınız anında çözülür.">
+    <meta name="keywords" content="fiber, internet, arıza, onarım, wifi, ağ kurulumu">
+    <title>FiberGBT | Fiber Arıza & Altyapı Hizmetleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #3182ce;
+            --dark: #1a202c;
+            --light: #f7fafc;
+            --danger: #c53030;
+            --success: #38a169;
+            --warning: #d69e2e;
+            --gray-100: #f7fafc;
+            --gray-200: #edf2f7;
+            --gray-300: #e2e8f0;
+            --gray-400: #cbd5e0;
+            --gray-500: #a0aec0;
+            --gray-600: #718096;
+            --gray-700: #4a5568;
+            --gray-800: #2d3748;
+            --gray-900: #1a202c;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Minimal İletişim Stilleri */
+        .contact-minimal {
+            padding: 5rem 0;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-minimal-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-minimal-content > p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .simple-phone-link {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            color: var(--primary);
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .simple-phone-link i {
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+
+        .simple-phone-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .availability {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%; /* iOS Safari için font boyutunu sabitler */
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(26, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        .logo-img {
+    width: 100px;  /* istediğin boyuta göre değiştir */
+    height: 50px; /* orantıyı korur */
+    vertical-align: middle; /* yazıyla hizalar */
+    margin-right: 8px; /* yazıdan biraz boşluk bırakır */
+}
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: #e6f7ff;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.8), rgba(45, 55, 72, 0.6));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #2c5aa0);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Services Section */
+.services {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: var(--gray-600);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Güncellenmiş Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(49, 130, 206, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3182ce;
+}
+
+.service-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--accent), #2c5aa0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+ 
+.service-card:hover .service-icon {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2c5aa0, var(--accent));
+}
+
+.service-card:hover .service-icon::after {
+    transform: scale(1.2);
+    opacity: 0.2;
+}
+
+.service-icon i {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.service-card p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 25px;
+    background: rgba(49, 130, 206, 0.1);
+}
+
+.service-link:hover {
+    color: #2c5aa0;
+    background: rgba(49, 130, 206, 0.15);
+    transform: translateX(5px);
+}
+
+.service-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .service-icon i {
+        font-size: 2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem;
+    }
+}
+        
+        /* Call Section */
+        .call-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .call-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="white"/></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.05;
+        }
+        
+        .call-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .call-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .phone-number {
+            display: inline-flex;
+            align-items: center;
+            background-color: white;
+            color: var(--primary);
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-number::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(49, 130, 206, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .phone-number:hover::before {
+            opacity: 1;
+        }
+        
+        .phone-number i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+        
+        .phone-number:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background-color: var(--gray-100);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 0;
+            background-color: white;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            background-color: white;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-question {
+            background-color: var(--gray-100);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--gray-200);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 0;
+            background-color: var(--gray-100);
+        }
+        
+        .testimonials-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-card {
+            min-width: 100%;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .testimonial-role {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--gray-400);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--accent);
+            transform: scale(1.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .footer-column p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            gap: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent);
+            width: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.2s ease, visibility 0.5s ease;
+        }
+        
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* MOBİL UYUMLULUK İYİLEŞTİRMELERİ */
+        
+        /* Genel mobil iyileştirmeler */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            
+            /* Hero bölümü mobil uyumluluğu */
+            .hero {
+                padding: 5rem 0;
+                background-attachment: scroll; /* Mobilde fixed background performans sorunu yaratabilir */
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            /* Bölüm başlıkları */
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+            }
+            
+            /* Servis kartları */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            /* Hakkımızda bölümü */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .about-text h2 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 1.2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            /* Çağrı bölümü */
+            .call-section {
+                padding: 4rem 0;
+            }
+            
+            .call-section h2 {
+                font-size: 2rem;
+            }
+            
+            .phone-number {
+                font-size: 1.3rem;
+                padding: 15px 25px;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            /* Minimal iletişim bölümü */
+            .contact-minimal {
+                padding: 4rem 0;
+            }
+            
+            .contact-minimal-content h2 {
+                font-size: 2rem;
+            }
+            
+            .simple-phone-link {
+                font-size: 1.5rem;
+                padding: 15px 30px;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            /* Back to top butonu */
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        /* Küçük ekranlar için ek iyileştirmeler */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .service-icon {
+                font-size: 3rem;
+                width: 80px;
+                height: 80px;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .faq-question {
+                padding: 1.2rem;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 1.2rem;
+            }
+        }
+        
+        /* Mevcut responsive tasarım */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+                order: 1;
+                margin-left: auto;
+            }
+            
+            nav ul {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem 0;
+                transition: left 0.4s ease-in-out;
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transform: translateX(-50px);
+                transition: all 0.4s ease;
+            }
+            
+            nav ul.active li {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+            nav ul.active li:nth-child(1) { transition-delay: 0.1s; }
+            nav ul.active li:nth-child(2) { transition-delay: 0.2s; }
+            nav ul.active li:nth-child(3) { transition-delay: 0.3s; }
+            nav ul.active li:nth-child(4) { transition-delay: 0.4s; }
+            nav ul.active li:nth-child(5) { transition-delay: 0.5s; }
+            
+            nav ul li a {
+                display: block;
+                padding: 1.2rem 0;
+                color: white;
+                text-decoration: none;
+                font-size: 1.3rem;
+                font-weight: 500;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                transition: all 0.3s ease;
+                width: 100%;
+            }
+            
+            nav ul li a:hover {
+                background-color: rgba(255,255,255,0.1);
+                padding-left: 2rem;
+            }
+            
+            /* Menü overlay efekti */
+            .menu-overlay {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+                z-index: 998;
+            }
+            
+            .menu-overlay.active {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                     <img src="photos/logo2.png" alt="FiberGBT Logo" class="logo-img">
+                    <!-- <span>FiberGBT</span> -->
+                </a>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Ana Sayfa</a></li>
+                        <li><a href="#services">Hizmetler</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#testimonials">Referanslar</a></li>
+                        <li><a href="#faq">SSS</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fiber Arıza ve İnternet Sorunlarınız İçin Hızlı Çözüm</h1>
+                <p>7/24 kesintisiz destek ile internet sorunlarınız anında çözülür. Hemen arayın, uzman ekibimiz yanınızda!</p>
+                <a href="tel:+905457660346" class="cta-button">Hemen Ara</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+        <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>Fiber altyapı ve telekomünikasyon çözümlerinde uzman hizmetler sunuyoruz</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Fiber Alp Yapı Kablolama</h3>
+                    <p>Profesyonel fiber altyapı kablolama çözümleri ile bina içi ve bina dışı fiber ağ sistemleri</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Fiberoptik Projelendirme</h3>
+                    <p>Fiber optik ağlar için kapsamlı projelendirme, tasarım ve uygulama danışmanlığı</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Fiberoptik Sonlandırma</h3>
+                    <p>Fiber optik kabloların profesyonel sonlandırılması ve test işlemleri</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Fiberoptik Arıza Çözümleri</h3>
+                    <p>Fiber optik ağlardaki arızaların hızlı tespiti ve profesyonel onarımı</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Yer Altı Hasar Çözümleri</h3>
+                    <p>Fiberoptik ve telefon kablolarında yer altı hasarlarının uzman onarımı</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Altyapı Hizmetleri</h3>
+                    <p>Telefon kablosu hasar çözümleri ve altyapı bakım onarım hizmetleri</p>
+                    <a href="#contact" class="service-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Section -->
+    <section class="call-section">
+        <div class="container">
+            <h2>Acil Durumlarda Hemen Bizi Arayın</h2>
+            <p>Fiber arıza veya internet kesintisi durumunda 7/24 hizmet veriyoruz. Uzman ekibimiz en kısa sürede sorununuzu çözecektir.</p>
+            <a href="tel:+905457660346" class="phone-number">
+                <i class="fas fa-phone-alt"></i>
+                05457660346
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>FiberGBT Hakkında</h2>
+                    <p>10 yılı aşkın tecrübemizle fiber internet altyapısı ve arıza onarım hizmetleri sunuyoruz. Müşteri memnuniyetini ön planda tutarak, hızlı ve kaliteli hizmet anlayışıyla çalışıyoruz.</p>
+                    <p>Uzman ekibimiz, en son teknoloji ekipmanlarla donatılmış olup, fiber optik sistemlerde oluşan her türlü arızaya müdahale edebilmektedir.</p>
+                    <p>7/24 kesintisiz destek hattımız ile acil durumlarda hızlı çözüm sunuyor, internet kesintilerini minimum süreye indiriyoruz.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="10">0+</div>
+                            <div class="stat-text">Yıllık Deneyim</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="2000">0+</div>
+                            <div class="stat-text">Mutlu Müşteri</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7/24</div>
+                            <div class="stat-text">Kesintisiz Destek</div>
+                        </div>
+                    </div>
+                </div>
+            <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="FiberGBT Fiber Ekibi">
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Müşteri Yorumları</h2>
+                <p>Müşterilerimizin bizimle ilgili deneyimleri</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Müşteri">
+                        </div>
+                        <p class="testimonial-text">"Fiber internetimdeki arızayı çok hızlı bir şekilde çözdüler. Ekip profesyonel ve işinin ehli. Kesinlikle tavsiye ediyorum."</p>
+                        <div class="testimonial-author">Ahmet Yılmaz</div>
+                        <div class="testimonial-role">İşletme Sahibi</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Müşteri">
+                        </div>
+                        <p class="testimonial-text">"Evime fiber internet kurulumu yaptırdım. Çok memnun kaldım. Kurulum ekibi çok nazik ve hızlıydı. Teşekkürler FiberGBT!"</p>
+                        <div class="testimonial-author">Ayşe Demir</div>
+                        <div class="testimonial-role">Ev Hanımı</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Müşteri">
+                        </div>
+                        <p class="testimonial-text">"Ofisimizdeki ağ sorunlarını çözdüler. Teknik bilgileri ve çözüm odaklı yaklaşımları için teşekkür ederim. Kesinlikle tercih edilesi bir firma."</p>
+                        <div class="testimonial-author">Mehmet Kaya</div>
+                        <div class="testimonial-role">Şirket Müdürü</div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Müşterilerimizin en çok sorduğu sorular ve cevapları</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Fiber arıza bildirimi sonrası ne kadar sürede müdahale ediyorsunuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Arıza bildirimi aldıktan sonra en geç 2 saat içinde teknik ekibimiz sorununuzu tespit edip müdahale için yola çıkıyor. Yoğunluk durumuna göre bu süre değişiklik gösterebilir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Fiber internet kurulumu ne kadar sürer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standart bir fiber internet kurulumu ortalama 2-4 saat arasında tamamlanmaktadır. Kurulum süresi binanın altyapısına ve teknik koşullara göre değişiklik gösterebilir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Hangi bölgelerde hizmet veriyorsunuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Şu an için Ankara içerisinde Gölbaşı merkezli hizmet vermekteyiz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Acil durumlarda 7/24 ulaşabilir miyim?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, acil durumlar için 7/24 kesintisiz destek hattımız mevcuttur. Haftanın her günü, gece veya gündüz farketmeksizin bize ulaşabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-minimal" id="contact">
+        <div class="container">
+            <div class="contact-minimal-content">
+                <h2>Hemen Ara</h2>
+                <p>7/24 Fiber Arıza ve İnternet Destek Hattı</p>
+                <div class="phone-simple">
+                    <a href="tel:+905457660346" class="simple-phone-link">
+                        <i class="fas fa-phone"></i>
+                        0545 766 03 46
+                    </a>
+                </div>
+                <p class="availability">Haftanın 7 günü, 24 saat hizmetinizdeyiz</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FiberGBT</h3>
+                    <p>Fiber internet ve arıza çözümlerinde güvenilir adresiniz. Müşteri memnuniyeti odaklı hizmet anlayışımızla yanınızdayız.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ahmet.kcaa?utm_source=ig_web_button_share_sheet&igsh=MWdlOWR5cjd4cGFiZw=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Referanslar</a></li>
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> SSS</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Fiber Arıza Onarım</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> İnternet Kurulum</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Ağ Çözümleri</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Wi-Fi Optimizasyon</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Teknik Destek</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Örnek Mah. Teknoloji Cad. No:123, Gölbaşı/Ankara</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>05457660346</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@FiberGBT.com.tr</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <span>7/24 Hizmet</span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FiberGBT. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Sayfa yükleme animasyonu
+        window.addEventListener('load', function() {
+            const loading = document.querySelector('.loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Header scroll efekti
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+            
+            // Aktif menü öğesi
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top
+        document.querySelector('.back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navMenu = document.querySelector('nav ul');
+            const overlay = document.querySelector('.menu-overlay');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Menü ikonunu değiştir
+            const icon = this.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                // Scroll'u engelle
+                document.body.style.overflow = 'hidden';
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                // Scroll'u geri getir
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Overlay tıklama ile menü kapatma
+        document.addEventListener('click', function(e) {
+            const navMenu = document.querySelector('nav ul');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.menu-overlay');
+            
+            if (overlay && overlay.contains(e.target)) {
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                const icon = mobileMenu.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.querySelector('nav ul');
+                const mobileMenu = document.querySelector('.mobile-menu');
+                const overlay = document.querySelector('.menu-overlay');
+                
+                navMenu.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
+                const icon = mobileMenu.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // ESC tuşu ile menüyü kapat
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const navMenu = document.querySelector('nav ul');
+                const mobileMenu = document.querySelector('.mobile-menu');
+                const overlay = document.querySelector('.menu-overlay');
+                
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                    const icon = mobileMenu.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Testimonials Slider
+        const track = document.querySelector('.testimonials-track');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function goToSlide(slideIndex) {
+            if (track) {
+                track.style.transform = `translateX(-${slideIndex * 100}%)`;
+                currentSlide = slideIndex;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === slideIndex);
+                });
+            }
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+        
+        // Auto slide
+        if (track && dots.length > 0) {
+            setInterval(() => {
+                let nextSlide = (currentSlide + 1) % dots.length;
+                goToSlide(nextSlide);
+            }, 5000);
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navMenu = document.querySelector('nav ul');
+                    const overlay = document.querySelector('.menu-overlay');
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
+                        const icon = document.querySelector('.mobile-menu i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+        });
+        
+        function animateNumbers() {
+            const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+            
+            statNumbers.forEach(statNumber => {
+                const target = parseInt(statNumber.getAttribute('data-target'));
+                const suffix = statNumber.textContent.includes('+') ? '+' : '';
+                const duration = 2000; // 2 saniye
+                const step = target / (duration / 16); // 60 FPS
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    statNumber.textContent = Math.floor(current) + suffix;
+                }, 16);
+            });
+        }
+
+        // Intersection Observer ile scroll'da tetikleme
+        function initNumberAnimation() {
+            const statsSection = document.querySelector('.stats');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumbers();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        }
+
+        // Sayfa yüklendiğinde başlat
+        document.addEventListener('DOMContentLoaded', function() {
+            initNumberAnimation();
+        });
+    </script>
+</body>
+</html>
